@@ -6,14 +6,27 @@
 //     console.log(document)
 // }
 
-let numbers: number[] = [1, 2, 3]
-numbers.forEach(n => n.toPrecision())
-console.log(numbers);
+// let numbers: number[] = [1, 2, 3]
+// numbers.forEach(n => n.toPrecision())
+// console.log(numbers);
 
-const nameSpace: string[] = ['femi', 'jasmine', 'Philip']
-for (let name of nameSpace){
-    console.log(`${name}`)
-}
+// const nameSpace: string[] = ['femi', 'jasmine', 'Philip']
+// for (let name of nameSpace){
+//     console.log(`${name}`)
+// }
+
+
+// let user: [number, string, boolean, number] = [1, 'cyril', true, 2 ]
+
+
+// const small = 1;
+// const medium = 2;
+// const large = 3;
+
+// const enum  Size { Small = 3, Medium, Large };
+// let mySize: Size = Size.Medium
+
+// console.log(mySize);
 
 // function getNumbers(): number[] {
 //     return numbers;
@@ -59,3 +72,38 @@ for (let name of nameSpace){
 //     }
 // }
         
+// function calculateTax(income: number, taxYear: number): number {
+//     if (income < 50_000)
+//     return income * 1.2;
+//     return income * 1.3
+// }
+
+// function calculateTax(income: number, taxYear = 2022): number {
+//     if (taxYear < 2022 )
+//     return income * 1.2;
+//     return income * 1.3
+// }
+
+// calculateTax( 10_000);
+
+// let employee = { id: 1};
+// employee.name = "cyril";
+
+// let employee: {
+//     id: number,
+//     name: string,
+//     isGold: boolean
+// } = { id: 1, name: "", isGold: true};
+// employee.name = "cyril";
+
+let employee: {
+    id: number,
+    name: string,
+    retire: (date: Date) => void
+} = {
+    id: 1,
+    name: 'Cyril',
+    retire: (date:Date) => {
+        console.log(date)
+    }
+};
