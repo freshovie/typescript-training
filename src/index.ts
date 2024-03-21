@@ -120,33 +120,33 @@
 //     }
 // };
 
-class Account {
-  readonly id: number;
-  owner: string;
-  balance: number;
-  nickname?: string | null;
+// class Account {
+//   readonly id: number;
+//   owner: string;
+//   balance: number;
+//   nickname?: string | null;
 
-  constructor(
-    id: number,
-    owner: string,
-    balance: number,
-    nickname?: string | null
-  ) {
-    this.id = id;
-    this.owner = owner;
-    this.balance = balance;
-    this.nickname = nickname;
-  }
+//   constructor(
+//     id: number,
+//     owner: string,
+//     balance: number,
+//     nickname?: string | null
+//   ) {
+//     this.id = id;
+//     this.owner = owner;
+//     this.balance = balance;
+//     this.nickname = nickname;
+//   }
 
-  deposit(amount: number) {
-    if (amount <= 0) throw new Error("Invalid amount");
-    this.balance += amount;
-  }
-}
+//   deposit(amount: number) {
+//     if (amount <= 0) throw new Error("Invalid amount");
+//     this.balance += amount;
+//   }
+// }
 
-let account = new Account(1, "Cyril", 200, null);
-account.deposit(500);
-console.log(account);
+// let account = new Account(1, "Cyril", 200, null);
+// account.deposit(500);
+// console.log(account);
 
 // class Person {
 //   constructor(public firstName: string, public lastName: string) {}
@@ -198,33 +198,33 @@ console.log(account);
 // student.takeTest();
 // console.log(student);
 
-class Person {
-    constructor(public firstName: string, public lastName: string) {
-    }
+// class Person {
+//     constructor(public firstName: string, public lastName: string) {
+//     }
 
-  get fullName() {
-    return this.firstName + ' ' + this.lastName;
-  }
-  // add another method called walk()
-  protected walk() {
-    console.log('Walking')
-  }
+//   get fullName() {
+//     return this.firstName + ' ' + this.lastName;
+//   }
+//   // add another method called walk()
+//   protected walk() {
+//     console.log('Walking')
+//   }
 
-  protected balance() {
-    console.log('my balance')
-  }
-}
+//   protected balance() {
+//     console.log('my balance')
+//   }
+// }
 
 // creating student class extending Person
-class Student extends Person {
-    constructor(public studentId: number, firstName: string, lastName: string) {
-      super(firstName, lastName)
-    }
-    takeTest() {
-        this.balance()
-      console.log('Taking a test');
-    }
-}
+// class Student extends Person {
+//     constructor(public studentId: number, firstName: string, lastName: string) {
+//       super(firstName, lastName)
+//     }
+//     takeTest() {
+//         this.balance()
+//       console.log('Taking a test');
+//     }
+// }
 
 // class Teacher extends Person {
 //     constructor(public teacherId: number, firstName: string, lastName: string, public qualification: string) {
@@ -239,117 +239,108 @@ class Student extends Person {
 //     }
 // }
 
-class Teacher extends Person {
+// class Teacher extends Person {
 
-    override get fullName() {
-        return 'Professor' + ' ' + super.fullName;
-    }
-      
-    giveTest() {
-        console.log('Giving a test');
-    }
-}
+//     override get fullName() {
+//         return 'Professor' + ' ' + super.fullName;
+//     }
 
-class Principal extends Person {
-    override get fullName() {
-      return 'Principal' + ' ' + super.fullName;
-    }
-}
-    
+//     giveTest() {
+//         console.log('Giving a test');
+//     }
+// }
 
-function printNames(people: Person[]) {
-    for (let person of people)
-      console.log(person.fullName);
-}
+// class Principal extends Person {
+//     override get fullName() {
+//       return 'Principal' + ' ' + super.fullName;
+//     }
+// }
 
-printNames([
-    new Student(1, 'Cyril', 'Okeleke'),
-    new Teacher('Ovie', 'Raji'),
-    new Principal('Evans', 'Chidi')
-])
-    
-    
-let teacher = new Teacher('Cyril', 'Ovie');
-let student = new Student(1, 'John', 'Ovie');
+// function printNames(people: Person[]) {
+//     for (let person of people)
+//       console.log(person.fullName);
+// }
 
+// printNames([
+//     new Student(1, 'Cyril', 'Okeleke'),
+//     new Teacher('Ovie', 'Raji'),
+//     new Principal('Evans', 'Chidi')
+// ])
 
-
+// let teacher = new Teacher('Cyril', 'Ovie');
+// let student = new Student(1, 'John', 'Ovie');
 
 // teacher.giveTest();
 
 // console.log(teacher.fullName)
 // console.log(student.fullName)
 
+// console.log(Math.floor(Math.random() * 100));
 
-console.log(Math.floor(Math.random() * 100));
+// class Ride {
+//   private static _activeRides: number = 5;
 
-class Ride {
-  private static _activeRides: number = 5;
+//   start() {
+//     Ride._activeRides++;
+//   }
+//   stop() {
+//     Ride._activeRides--;
+//   }
 
-  start() {
-    Ride._activeRides++;
-  }
-  stop() {
-    Ride._activeRides--;
-  }
+//   get ride() {
+//     return Ride._activeRides;
+//   }
+// }
 
-  get ride() {
-    return Ride._activeRides;
-  }
-}
+// let ride1 = new Ride();
+// ride1.start();
 
-let ride1 = new Ride();
-ride1.start();
+// let ride2 = new Ride();
+// ride2.stop();
 
-let ride2 = new Ride();
-ride2.stop();
+// let ride3 = new Ride();
+// ride3.stop();
 
-let ride3 = new Ride();
-ride3.stop();
+// let ride4 = new Ride();
+// ride4.start();
 
-let ride4 = new Ride();
-ride4.start();
+// let ride5 = new Ride();
+// ride5.start();
 
-let ride5 = new Ride();
-ride5.start();
+// let ride6 = new Ride();
+// ride6.start();
 
-let ride6 = new Ride();
-ride6.start();
+// let ride7 = new Ride();
+// ride7.start();
 
-let ride7 = new Ride();
-ride7.start();
+// console.log(ride1.ride);
 
-console.log(ride1.ride);
+// class SeatAssignment {
+//   [seatNumber: string]: string;
+// }
+// let seats = new SeatAssignment();
+// seats.seatNumber1 = "Cyril";
+// seats.seatNumber2 = "John";
+// console.log(seats);
 
-class SeatAssignment {
-    [seatNumber: string]: string;
-}
-let seats = new SeatAssignment();
-seats.seatNumber1 = 'Cyril';
-seats.seatNumber2 = 'John';
-console.log(seats);
+// abstract class Shape {
+//   constructor(public color: string) {}
+//   abstract render(): void;
+// }
 
-abstract class Shape {
-    constructor(public color: string) {}
-    abstract render(): void;
-}
+// class Circle extends Shape {
+//   constructor(public radius: number, color: string) {
+//     super(color);
+//   }
 
-class Circle extends Shape {
-    constructor(public radius: number, color: string) {
-      super(color);
-    }
+//   override render(): void {
+//     console.log("Rendering a circle");
+//   }
+// }
 
-    override render(): void {
-        console.log('Rendering a circle')
-    }
-}
-
-let circle = new Circle(5, 'red');
-circle.render()
-console.log(circle);
-
-
-
+// let circle = new Circle(5, "red");
+// circle.render();
+// console.log(circle);
 
 // class Ride {
 //     static activeRides: number = 5;
@@ -380,3 +371,111 @@ console.log(circle);
 // ride7.start();
 
 // console.log(Ride.activeRides);
+
+// class Person {
+//   constructor(public firstName: string, public lastName: string) {}
+//   }
+
+// let johnDoe = new Person("John", "Doe")
+
+// function greetPerson(person: Person) {
+//     return `Hello ${person.firstName} ${person.lastName}`
+// }
+
+// console.log(greetPerson(johnDoe))
+
+//Classwork 1
+class Logger {
+  constructor(public fileName: string) {}
+  get file() {
+    return this.fileName;
+  }
+
+  log(message: string): void {
+    console.log(`Writing message "${message}" to file ${this.fileName}`);
+  }
+}
+
+let logger = new Logger("app.log");
+logger.log("This is a log entry");
+
+//Classwork 2
+class Person {
+  constructor(public firstName: string, public lastName: string) {}
+
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+}
+
+// Classwork 3
+class Employee extends Person {
+  constructor(firstName: string, lastName: string, private salary: number) {
+    super(firstName, lastName);
+  }
+
+  getElevation() {
+    return `The employee ${this.fullName} earns this ${this.salary} yearly`;
+  }
+}
+
+let emp = new Employee("John", "Doe", 300_000);
+console.log(emp.getElevation());
+console.log(emp);
+
+// let person = new Person('Ovie', 'Good');
+// person.fullName
+// console.log(person)
+
+//Classwork 4
+
+// private: only allows access to the class members from within the class.
+// protected: allows access to the class member from itself and any classes that inherit it.
+
+//Classwork 5
+
+interface IEmployee {
+  name: string;
+  earnings: number;
+  address: {
+    street: string;
+    city: string;
+    zipCode: number;
+  };
+}
+
+let employee = {
+  name: "John Smith",
+  earnings: 50_000,
+  address: {
+    street: "Flinders st",
+    city: "Melbourne",
+    zipCode: 3144,
+  },
+};
+
+class keyValuePair<A> {
+  constructor(public key: A, public value: string) {}
+}
+
+let pair = new keyValuePair<string>("1", "Apple");
+console.log(`Key Value Pair is ${pair.key}:${pair.value}`);
+
+let pair2 = new keyValuePair<number>(1, "Apple");
+console.log(`Key Value Pair is ${pair2.key}:${pair2.value}`);
+
+pair2.key.toLocaleString(); // error because type of `key` is  not `string`.
+
+function getEarnings(emp: IEmployee): number {
+  return emp.earnings;
+}
+
+class ArrayUtils {
+  static wrapInArray<T>(value: T) {
+    return [value];
+  }
+}
+// let utils = new ArrayUtils();
+let numbers = ArrayUtils.wrapInArray(8);
+console.log(numbers[0]);
+
